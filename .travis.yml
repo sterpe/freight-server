@@ -5,6 +5,7 @@ services:
 
 before_install:
   - npm i -g npm
+  - npm --version
 
 script:
   - npm start &
