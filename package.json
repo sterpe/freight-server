@@ -2,6 +2,9 @@
   "name": "freight-server",
   "version": "0.5.1",
   "scripts": {
+    "jshint": "jshint --reporter=node_modules/jshint-stylish `find bin config lib routes -type f -regex '.*\\.js$'`",
+    "jscs": "jscs -r unix -c .jscsrc `find bin config lib routes -type f -regex '.*\\.js$'`",
+    "lint": "npm run jshint && npm run jscs",
     "start": "redis-server & node ./bin/freight-server | bunyan -o short"
   },
   "main": "./bin/freight-server",
@@ -27,10 +30,9 @@
     "tar.gz": "0.1.1"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-jscs": "^0.7.1"
+    "jscs": "^2.1.1",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1"
   },
   "repository": {
     "type": "git",
