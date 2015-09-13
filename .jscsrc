@@ -17,7 +17,7 @@
   "validateIndentation": 2,
   "validateLineBreaks": "LF",
   "validateQuoteMarks": true,
-  "validateJSDoc": {
+  "jsDoc": {
     "checkParamNames": true,
     "checkRedundantParams": true,
     "requireParamTypes": true
